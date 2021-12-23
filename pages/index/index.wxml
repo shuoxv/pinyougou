@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="pyg_class">
+  <SearchInput></SearchInput>
+  <!-- 轮播图 -->
+  <view class="index_swiper">
+    <swiper autoplay="{{true}}" indicator-dots="{{true}}" circular="{{true}}">
+      <swiper-item  wx:for="{{swiperList}}"
+        wx:key="goods_id">
+        <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+          <image mode="widthFix" src="item.image_src" />
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="index_cate">
+    <navigator
+    wx:for="{{cateList}}"
+    wx:key="name"
+    class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+      <image mode="widthFix" src="{{item.image_src}}" />
+    </navigator>
+  </view>
+</view>
