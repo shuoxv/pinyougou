@@ -20,4 +20,30 @@
       <image mode="widthFix" src="{{item.image_src}}" />
     </navigator>
   </view>
+  <!-- 楼层图 -->
+  <view class="index_floor">
+    <view 
+    wx:for="floorList"
+    wx:for-item="{{item1}}"
+    wx:for-index="index1"
+    wx:key="floor_title"
+    class="floor_group"
+    >
+    <view class="floor_title">
+      <image class="" src="{{item1.floor_title.image_src}}" mode="widthFix" lazy-load="false" binderror="" bindload="">
+      </image>
+    </view>
+    
+    <view class="floor_list">
+      <navigator
+      wx:for="{{item2}}"
+      wx:for-item="item2"
+      wx:for-index="index2"
+      wx:key="name"
+      >
+      <image mode="widthFix" src="item2.image_src"/>
+      </navigator>
+    </view>
+    </view>
+  </view>
 </view>

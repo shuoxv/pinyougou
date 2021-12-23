@@ -4,7 +4,9 @@ Page({
   data: {
     swiperList:[],
     // 导航数组
-    cateList:[]
+    cateList:[],
+    // 楼层数据
+    floorList:[],
 
   },
   getSwiperList(){
@@ -29,10 +31,21 @@ Page({
       console.log(error)
     })
   },
+  getFloorList(){
+    request({
+      url:'https://api.zbztb.cn/api/public/v1/home/floordata'
+    })
+    .then(result=>{
+      this.setData({
+        
+      })
+    })
+  },
   //options(Object)
   onLoad: function(options){
     this.getSwiperList()
     this.getCateList()
+    this.getFloorList()
   },
   onReady: function(){
     

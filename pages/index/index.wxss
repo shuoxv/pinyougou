@@ -17,3 +17,16 @@ view {
 .index_cate navigator image {
   width: 100%;
 }
+.index_floor .floor_title image {
+  width: 100%;
+}
+.index_floor .floor_list navigator {
+  float: left;
+  width: 33.33%;
+}
+.index_floor .floor_list navigator:nth-last-child(-n+4) {
+  height: 12865.38vw/232/2;
+}
+.index_floor .floor_list navigator image {
+  width: 100%;
+}
